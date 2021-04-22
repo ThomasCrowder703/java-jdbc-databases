@@ -52,7 +52,7 @@ public class UpdateOrderDao {
     private PreparedStatement createPreparedStatement(Connection con, ParamsDto paramsDto) throws SQLException {
         PreparedStatement preparedStatement = con.prepareStatement(query);
         preparedStatement.setString(1, paramsDto.getStatus());
-        preparedStatement.setLong(1,paramsDto.getOrderId());
+        preparedStatement.setLong(2,paramsDto.getOrderId());
         return preparedStatement;
     }
 }
